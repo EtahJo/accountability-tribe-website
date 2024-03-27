@@ -4,11 +4,12 @@ import HeroRight from './HeroRight';
 
 const HeroSection = () => {
   return (
-    <main className="grid grid-cols-2">
-      <div>
+    <main className="grid grid-cols-12 my-20">
+      <div className="col-start-2 col-end-8">
         <HeroLeft />
       </div>
-      <div>
+
+      <div className="col-start-8 col-end-11">
         <HeroRight />
       </div>
     </main>

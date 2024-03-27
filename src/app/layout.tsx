@@ -20,10 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <AuthProvider>
         <body className={inter.className}>
-          <div className="bg-pink">
-            <div className="mx-4 pt-2">
+          <div className="bg-pink p-4">
+            <div className="mx-4 p-2">
               <Navbar />
-              {children}
+              <div className="mt-28">{children}</div>
             </div>
           </div>
         </body>

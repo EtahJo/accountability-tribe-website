@@ -3,7 +3,7 @@ import { HeaderButton } from '@/types/types';
 
 const HeaderButton = ({ name }: HeaderButton) => {
   return (
-    <div className="">
+    <div className="cursor-pointer">
       <p className="rounded-full bg-purple text-white font-bold text-3xl shadow-buttonInner p-2 text-center">
         {name}
       </p>

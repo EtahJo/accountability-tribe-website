@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import { useContext } from 'react';
 import { AuthContext } from '@/contexts/AuthenticationContext';
 import HomeLoggedIn from '@/components/HomePage/HomeLoggedIn';

@@ -3,16 +3,17 @@ import { SquareComponentType } from '@/types/types';
 
 const SquareComponent = (props: SquareComponentType) => {
   return (
-    <div className="relative my-1">
-      <div className="bg-white rounded-3xl p-2  w-44 h-44 rotate-45" />
-      <div className="absolute z-10 top-0 left-0.5">
-        <div className="bg-purple rounded-full font-bold text-white w-20 h-20 text-center  m-auto">
-          <h2 className="text-2xl text-center align-middle m-auto">
+    <div className="relative w-40 h-40 p-3">
+      <div className="absoulte bg-white rounded-3xl p-2 w-40 h-40 rotate-45 shadow-buttonInner " />
+      <div className="absolute z-10 top-[20px] left-[10px]">
+        <div className="flex justify-center flex-col place-items-center">
+          <h2 className="text-5xl max-w-20 font-bold text-white  bg-purple rounded-full p-2 ">
             {props.header}
           </h2>
-        </div>
-        <div>
-          <p className="font-bold text-center">{props.description}</p>
+
+          <div>
+            <p className="font-bold text-center text-lg">{props.description}</p>
+          </div>
         </div>
       </div>
     </div>

@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         purple: '#9352E6',
         pink: '#F2ADEF',
+        lightPink: 'rgba(242, 173, 239, 0.3)',
       },
       boxShadow: {
         '3xl': '0px 4px 4px 0px #00000040',
