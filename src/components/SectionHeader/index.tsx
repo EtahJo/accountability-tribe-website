@@ -6,7 +6,7 @@ const SectionHeader = ({ name, icon }: SectionHeaderType) => {
   return (
     <div
       className={classNames(
-        'bg-purple rounded-full shadow-buttonInner font-bold text-center px-2 py-px flex justify-center text-nowrap'
+        'bg-purple rounded-full shadow-buttonInner font-bold text-center px-2 py-px flex justify-center text-nowrap place-items-center'
       )}
     >
       {' '}

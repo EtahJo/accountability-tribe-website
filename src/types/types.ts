@@ -30,3 +30,10 @@ export type TribeSnippetTwoType = {
   description: string;
   link: string;
 };
+export type CompletionLeveltype = {
+  completionStatement: string;
+  percentage: number;
+  message?: string;
+  completed?: boolean;
+  carriedOver?: boolean;
+};
