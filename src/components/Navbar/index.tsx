@@ -8,7 +8,7 @@ import { AuthContext } from '@/contexts/AuthenticationContext';
 const Navbar = () => {
   const { login } = useContext(AuthContext);
   return (
-    <div className="bg-purple p-2 rounded-full flex justify-between align-middle items-center fixed top-5 w-[96%] z-10">
+    <div className="bg-purple p-2 rounded-full flex justify-between align-middle items-center fixed top-5 w-[96%] z-20">
       <div className="bg-white rounded-full px-4 py-2 shadow-3xl cursor-pointer">
         <h1 className="font-bold text-2xl italic ">Accountability Tribe</h1>
       </div>

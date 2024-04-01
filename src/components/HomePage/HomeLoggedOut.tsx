@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import HeroSection from '../HeroSection/index';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import TrialImage from '../../../public/psalm-23.webp';
 import CustomInput from '../CustomInput/index';
 import HeaderButton from '../Buttons/HeaderButton/index';
@@ -34,7 +34,7 @@ const HomeLoggedOut = () => {
           Contact Us, Give Us Your Feedback, We are Here for You
         </p>
         <div className="bg-white rounded-3xl col-start-7 col-end-11">
-          <form className="p-5">
+          <form className="p-5 w-full">
             <CustomInput
               type="text"
               name="email"
@@ -42,7 +42,7 @@ const HomeLoggedOut = () => {
               required
             />
             <CustomInput textArea name="Message" placeholder="Message" />
-            <div className="w-3/4">
+            <div className="w-full">
               <HeaderButton name="Send Message" />
             </div>
           </form>

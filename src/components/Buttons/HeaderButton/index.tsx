@@ -1,5 +1,6 @@
 import React from 'react';
 import { HeaderButton } from '@/types/types';
+import classNames from 'classnames';
 
 const HeaderButton = ({ name }: HeaderButton) => {
   return (

@@ -1,7 +1,61 @@
 import React from 'react';
+import SectionHeader from '../SectionHeader/index';
+import TribeSnippet from '../Tribe/TribeSnippet/index';
+import TribeSnippetTwo from '../Tribe/TribeSnippetTwo/index';
+import { AiFillPlusCircle } from 'react-icons/ai';
+import Profile from '../../../public/profile-pic.jpeg';
 
 const HomeLoggedIn = () => {
-  return <div>HomeLoggedIn</div>;
+  return (
+    <div className="grid grid-cols-12 gap-4">
+      <div className="col-start-1 col-end-9 bg-white rounded-full p-6 shadow-buttonInner">
+        <div className="shadow-3xl rounded-full">
+          <div className="bg-white rounded-full relative p-2 shadow-buttonInner">
+            <div className="absolute -top-3 left-8">
+              <SectionHeader name="Your Tribes" />
+            </div>
+            <div className="flex">
+              <TribeSnippet name="Tribe Name" members={200} />
+              <TribeSnippet name="Tribe Name" members={200} />
+              <TribeSnippet name="Tribe Name" members={200} />
+              <TribeSnippet name="Tribe Name" members={200} />
+              <TribeSnippet name="Tribe Name" members={200} />
+              <TribeSnippet name="Tribe Name" members={200} />
+              <TribeSnippet name="Tribe Name" members={200} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="col-start-9 col-end-12 mt-4">
+        <div className="bg-white relative rounded-full shadow-buttonInner p-4">
+          <div className="absolute -top-3 left-8">
+            <SectionHeader name="Keep This in Mind" />
+          </div>
+          <p className="pl-5">
+            You have been given this mountain to show others that it can be
+            moved.
+          </p>
+        </div>
+        <div>
+          <div className="mt-6">
+            <p className="font-bold text-3xl text-center mb-px">
+              Popular Public Tribes
+            </p>
+            <div className="bg-purple rounded-full h-3" />
+          </div>
+          <div className="bg-white rounded-full mt-5 p-4">
+            <TribeSnippetTwo
+              tribeName="Tribe Name"
+              members={200}
+              description="The description of the tribe ..."
+              link="/"
+              profileImage={Profile}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default HomeLoggedIn;
