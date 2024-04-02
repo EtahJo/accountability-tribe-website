@@ -31,9 +31,10 @@ export type TribeSnippetTwoType = {
   link: string;
 };
 export type CompletionLeveltype = {
-  completionStatement: string;
+  completionStatement?: string;
   percentage: number;
-  message?: string;
+  title: string;
   completed?: boolean;
   carriedOver?: boolean;
+  unCompleted?: boolean;
 };

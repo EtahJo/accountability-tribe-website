@@ -21,17 +21,17 @@ const TribeSnippetTwo = ({
         sizes="50vw"
       />
 
-      <div className="bg-purple flex justify-between p-3 rounded-xt-full">
-        <p className="font-bold ml-20">{tribeName}</p>
+      <div className="bg-purple flex justify-between px-5 py-3 rounded-t-full">
+        <p className="font-bold ml-16">{tribeName}</p>
         <span className="flex text-pink gap-px">
           <p>{members}</p>
           <p>members</p>
         </span>
       </div>
-      <div className="bg-[rgba(137,77,214,0.3)] flex justify-between p-2">
-        <p className="ml-20">{description}</p>
+      <div className="bg-[rgba(137,77,214,0.3)] flex justify-between p-2 rounded-b-full">
+        <p className="ml-20 w-6/12 truncate">{description}</p>
         <Link
-          className="bg-pink rounded-full shadow-buttonInner px-2 py-px text-center font-bold "
+          className="bg-pink rounded-full shadow-buttonInner px-2 py-px text-center font-bold h-10 place-content-center mr-5"
           href={link}
         >
           Join

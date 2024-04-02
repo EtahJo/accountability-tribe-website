@@ -15,7 +15,7 @@ const HomeLoggedIn = () => {
             <div className="absolute -top-3 left-8">
               <SectionHeader name="Your Tribes" />
             </div>
-            <div className="flex">
+            <div className="flex overflow-scroll bg-blend-overlay">
               <TribeSnippet name="Tribe Name" members={200} />
               <TribeSnippet name="Tribe Name" members={200} />
               <TribeSnippet name="Tribe Name" members={200} />
@@ -26,16 +26,29 @@ const HomeLoggedIn = () => {
             </div>
           </div>
         </div>
-        <div className="relative bg-white rounded-full shadow-buttonInner p-3 mt-10">
+        <div className="relative bg-white rounded-3xl shadow-buttonInner p-3 mt-10">
           <div className="absolute -top-3 right-7">
             <SectionHeader name="Add Task" icon={<AiFillPlusCircle />} />
           </div>
-          <div className="bg-purple rounded-2xl p-2 mt-4">
+          <div className="bg-purple rounded-2xl p-2 my-7">
             <p className="text-white font-bold uppercase text-4xl text-center">
               What needs to get done today
             </p>
           </div>
-          <CompletionLevel />
+          <div>
+            <CompletionLevel percentage={100} title="Task not done" completed />
+            <CompletionLevel
+              percentage={30}
+              title="Task not done"
+              unCompleted
+            />
+            <CompletionLevel
+              percentage={90}
+              title="Task not done"
+              unCompleted
+              carriedOver
+            />
+          </div>
         </div>
       </div>
       <div className="col-start-9 col-end-12 mt-4">
@@ -59,7 +72,7 @@ const HomeLoggedIn = () => {
             <TribeSnippetTwo
               tribeName="Tribe Name"
               members={200}
-              description="The description of the tribe ..."
+              description="The description of the tribe, i want to check if ellipsis is working well"
               link="/"
               profileImage={Profile}
             />
