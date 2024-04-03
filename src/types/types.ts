@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
 import React from 'react';
 
-export type HeaderButton = {
+export type HeaderButtonType = {
   name: string;
 };
 export type SquareComponentType = {
