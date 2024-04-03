@@ -1,0 +1,42 @@
+name: Run CI
+
+on:
+  push:
+    branches:
+      - '**'
+
+env:
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_FEED_CI_WEBHOOK_URL }}
+
+jobs:
+  run-lint:
+    runs-on: ubuntu-20.04
+    steps:
+      - id: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.19.1
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - id: lint
+        run: |
+          yarn
+          yarn lint
+          yarn build
+
+      - uses: act10ns/slack@v2
+        with:
+          status: ${{ job.status }}
+          steps: ${{ toJson(steps) }}
+        if: always()
