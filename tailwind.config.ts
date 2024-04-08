@@ -22,6 +22,9 @@ const config: Config = {
         '3xl': '0px 4px 4px 0px #00000040',
         buttonInner: '0px 4px 4px 0px #00000040 inset',
       },
+      zIndex: {
+        '100': '100',
+      },
     },
   },
   plugins: [],

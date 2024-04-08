@@ -5,9 +5,6 @@ on:
     branches:
       - '**'
 
-env:
-  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_FEED_CI_WEBHOOK_URL }}
-
 jobs:
   run-lint:
     runs-on: ubuntu-20.04

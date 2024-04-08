@@ -12,10 +12,11 @@ const TribeSnippetTwo = ({
   return (
     <div className="rounded-full relative my-4">
       <Image
-        className="absolute left-2 -top-px p-2 rounded-full"
+        className="absolute left-2 top-3 border-purple border-2 rounded-full object-cover"
         src={profileImage}
         style={{
-          width: '20%',
+          width: '80px',
+          height: '70px',
         }}
         alt="Picture of the author"
         sizes="50vw"
@@ -23,9 +24,8 @@ const TribeSnippetTwo = ({
 
       <div className="bg-purple flex justify-between px-5 py-3 rounded-t-full">
         <p className="font-bold ml-16">{tribeName}</p>
-        <span className="flex text-pink gap-px">
-          <p>{members}</p>
-          <p>members</p>
+        <span className="flex text-pink gap-px leading-3">
+          <p className="sm:text-base text-xs">{members} members</p>
         </span>
       </div>
       <div className="bg-[rgba(137,77,214,0.3)] flex justify-between p-2 rounded-b-full">

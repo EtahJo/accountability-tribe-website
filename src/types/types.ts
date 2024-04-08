@@ -32,9 +32,15 @@ export type TribeSnippetTwoType = {
 };
 export type CompletionLeveltype = {
   completionStatement?: string;
-  percentage: number;
+  percentage: string;
   title: string;
   completed?: boolean;
   carriedOver?: boolean;
   unCompleted?: boolean;
+};
+export type MovingTextType = {
+  textOne: string;
+  textTwo: string;
+  colorUp?: boolean;
+  colorDown?: boolean;
 };

@@ -12,26 +12,26 @@ const CompletionLevel = ({
   unCompleted,
 }: CompletionLeveltype) => {
   return (
-    <div className="bg-white rounded-full shadow-3xl my-7 ">
-      <div className="bg-white rounded-full shadow-buttonInner w-full relative flex justify-between">
+    <div className="bg-white rounded-full shadow-3xl my-7 w-full ">
+      <div className="bg-white rounded-full shadow-buttonInner relative flex justify-between">
         <p className="absolute bg-pink rounded-full shadow-buttonInner -top-3 px-2">
           {title}
         </p>
         <div
           className={classNames(
             {
-              ['w-[' + percentage + '%] rounded-l-full']: unCompleted,
-              ['w-full rounded-full']: completed,
+              ['rounded-l-full shadow-buttonInner w-[40%]']: unCompleted,
+              ['w-full rounded-full shadow-buttonInner']: completed,
             },
             'bg-purple'
           )}
         >
           <p className="text-end text-white font-bold p-2 text-xl mr-4">
-            {completed ? 'Completed' : percentage + '%'}
+            {completed ? 'Completed' : percentage}
           </p>
         </div>
         {carriedOver && (
-          <p className="text-gray-500 italic place-content-center mr-4">
+          <p className="text-gray-500 italic place-content-center mr-4 text-sm">
             Carried Over
           </p>
         )}

@@ -6,5 +6,5 @@ import HomeLoggedOut from '@/components/HomePage/HomeLoggedOut';
 
 export default function Home() {
   const { login } = useContext(AuthContext);
-  return <main>{!login ? <HomeLoggedIn /> : <HomeLoggedOut />}</main>;
+  return <main>{login ? <HomeLoggedIn /> : <HomeLoggedOut />}</main>;
 }
