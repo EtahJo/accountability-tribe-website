@@ -1,8 +1,11 @@
 import { StaticImageData } from 'next/image';
 import React from 'react';
+import { FormsyInjectedProps } from 'formsy-react';
 
 export type HeaderButtonType = {
   name: string;
+  type?: 'submit' | 'reset' | undefined;
+  disabled?: boolean;
 };
 export type SquareComponentType = {
   header: string;
@@ -14,7 +17,9 @@ export type CustomInputType = {
   placeholder: string;
   textArea?: boolean;
   required?: boolean;
-};
+  value: any;
+  changeEvent: (val: any) => void;
+} & FormsyInjectedProps<any>;
 export type SectionHeaderType = {
   name: string;
   icon?: React.ReactElement;
