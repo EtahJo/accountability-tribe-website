@@ -4,6 +4,7 @@ import { AiFillMessage } from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { AuthContext } from '@/contexts/AuthenticationContext';
+import Link from 'next/link';
 
 const Navbar = () => {
   const { login } = useContext(AuthContext);
@@ -21,7 +22,9 @@ const Navbar = () => {
         </div>
       ) : (
         <div className="flex gap-2 items-center">
-          <p className="text-lg cursor-pointer">Login</p>
+          <Link className="text-lg cursor-pointer" href={'auth/login'}>
+            Login
+          </Link>
           <p className="text-white text-lg bg-black rounded-full p-2 shadow-3xl shadow-white cursor-pointer">
             Sign Up
           </p>
