@@ -22,11 +22,11 @@ export default function RootLayout({
       <AuthProvider>
         <body className={inter.className}>
           <div className="bg-pink">
-            <div className="mx-4 p-2 min-h-screen ">
+            <div className="">
               <Navbar />
               <div className="mt-28">{children}</div>
+              <Footer />
             </div>
-            <Footer />
           </div>
         </body>
       </AuthProvider>

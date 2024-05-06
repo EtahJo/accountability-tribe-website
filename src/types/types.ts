@@ -17,6 +17,7 @@ export type CustomInputType = {
   placeholder: string;
   textArea?: boolean;
   required?: boolean;
+  Icon?: React.ReactElement;
   value: any;
   changeEvent: (val: any) => void;
 } & FormsyInjectedProps<any>;
@@ -48,4 +49,13 @@ export type MovingTextType = {
   textTwo: string;
   colorUp?: boolean;
   colorDown?: boolean;
+};
+export type CustomCheckBoxProps = {
+  label: string;
+  value: any;
+  changeEvent: (val: any) => void;
+} & FormsyInjectedProps<any>;
+
+export type SlideShowProps = {
+  slides: { src: string }[];
 };
