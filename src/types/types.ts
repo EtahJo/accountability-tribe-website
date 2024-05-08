@@ -52,8 +52,8 @@ export type MovingTextType = {
 };
 export type CustomCheckBoxProps = {
   label: string;
-  value: any;
-  changeEvent: (val: any) => void;
+  checked: boolean;
+  onChange: (val: any) => void;
 } & FormsyInjectedProps<any>;
 
 export type SlideShowProps = {

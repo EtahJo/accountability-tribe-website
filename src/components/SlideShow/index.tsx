@@ -9,7 +9,7 @@ const SlideShow = ({ slides }: SlideShowProps) => {
   const settings = {
     // dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     innitialSlide: 0,
@@ -31,12 +31,11 @@ const SlideShow = ({ slides }: SlideShowProps) => {
             <Image
               src={slide.src}
               alt="slide image"
-              className="absolute object-fill top-0 left-0 h-screen w-screen"
-              sizes="100vw"
+              className="fixed object-cover bottom-0 left-0 h-full w-screen "
               priority
-              height={3000}
-              width={3000}
+              fill
             />
+            <div className="bg-pink mix-blend-overlay absolute inset-0" />
           </div>
         ))}
       </Slider>

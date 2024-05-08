@@ -21,11 +21,13 @@ export default function RootLayout({
     <html lang="en">
       <AuthProvider>
         <body className={inter.className}>
-          <div className="bg-pink">
-            <div className="">
+          <div className="bg-pink relative h-full w-full">
+            <div className=" h-full">
               <Navbar />
               <div className="mt-28">{children}</div>
-              <Footer />
+              <div className="z-10">
+                <Footer />
+              </div>
             </div>
           </div>
         </body>

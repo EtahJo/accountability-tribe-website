@@ -25,6 +25,12 @@ const config: Config = {
       zIndex: {
         '100': '100',
       },
+      screens: {
+        phone: '376px',
+        medPhone: '439px',
+        largePhone: '524px',
+        '350': '350px',
+      },
     },
   },
   plugins: [],

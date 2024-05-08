@@ -35,7 +35,7 @@ const HomeLoggedOut = () => {
           Take A Look At Community Interactions and More
         </p>
       </div>
-      <div className="my-16 grid grid-cols-12 place-items-center">
+      <div className="my-16 grid grid-cols-12 place-items-center pb-10">
         <p className="font-bold text-4xl lg:col-start-2 lg:col-end-4 col-start-2 col-end-11 lg:mb-0 mb-10">
           Contact Us, Give Us Your Feedback, We are Here for You
         </p>
